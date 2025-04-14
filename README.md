@@ -2,8 +2,6 @@
 
 <div align="center">
   
-![Python Optimization](https://raw.githubusercontent.com/coin-or/pulp/master/pulp/images/logo.png)
-
 [![GitHub stars](https://img.shields.io/github/stars/yourusername/Python_Mathematical_Optimization?style=social)](https://github.com/yourusername/Python_Mathematical_Optimization/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/yourusername/Python_Mathematical_Optimization?style=social)](https://github.com/yourusername/Python_Mathematical_Optimization/network/members)
 [![Python Version](https://img.shields.io/badge/python-3.6%2B-blue)](https://www.python.org/downloads/)
@@ -33,17 +31,11 @@ This repository contains real-world examples, proven modeling techniques, and in
 ### Option 1: Run in Google Colab (No Installation Required)
 
 <p align="center" style="display: flex; justify-content: center; gap: 10px;">
-  <a href="https://colab.research.google.com/drive/your-notebook-link" target="_blank">
+  <a href="https://colab.research.google.com/drive/1WpPXWPbjXvFU5KtQJ0ZxAQA9kyQXID1N?usp=sharing" target="_blank">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Linear Programming In Colab" />
   </a>
-  <a href="https://colab.research.google.com/drive/your-second-notebook-link" target="_blank">
+  <a href="https://colab.research.google.com/drive/1-TDl6l3ibZr0Mp7cPx-FWmQPBYsQ4hev?usp=sharing" target="_blank">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Integer Programming In Colab" />
-  </a>
-  <a href="https://colab.research.google.com/drive/your-third-notebook-link" target="_blank">
-    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Supply Chain Optimization In Colab" />
-  </a>
-  <a href="https://colab.research.google.com/drive/your-fourth-notebook-link" target="_blank">
-    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Portfolio Optimization In Colab" />
   </a>
 </p>
 
