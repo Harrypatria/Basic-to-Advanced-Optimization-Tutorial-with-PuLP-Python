@@ -22,6 +22,9 @@ This repository contains real-world examples, proven modeling techniques, and in
 ### Option 1: Run in Google Colab (No Installation Required)
 
 <p align="center" style="display: flex; justify-content: center; gap: 10px;">
+  <a href="https://colab.research.google.com/drive/1gbFxK2mgF_9vT8da4-DNvDi0jRs9RoE5?usp=sharing" target="_blank">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Applied usecases" />
+  </a>
   <a href="https://colab.research.google.com/drive/1WpPXWPbjXvFU5KtQJ0ZxAQA9kyQXID1N?usp=sharing" target="_blank">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Linear Programming In Colab" />
   </a>
