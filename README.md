@@ -3,7 +3,6 @@
 <div align="center">
   
 [![GitHub stars](https://img.shields.io/github/stars/yourusername/Python_Mathematical_Optimization?style=social)](https://github.com/Harrypatria/Basic-to-Advanced-Optimization-Tutorial-with-PuLP-Python)
-[![Python Version](https://img.shields.io/badge/python-3.6%2B-blue)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 </div>
