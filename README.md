@@ -1,12 +1,5 @@
 # 🧮 Mathematical Optimization with Python Tutorial
 
-<div align="center">
-  
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/Python_Mathematical_Optimization?style=social)](https://github.com/Harrypatria/Basic-to-Advanced-Optimization-Tutorial-with-PuLP-Python)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-</div>
-
 ## 🌟 Overview
 
 A comprehensive, production-ready mathematical optimization tutorial using Python libraries such as PuLP, SciPy, CVXPY, and Pyomo. This tutorial covers everything from basic linear programming to advanced optimization techniques for real-world problems in operations research, finance, logistics, and machine learning.
