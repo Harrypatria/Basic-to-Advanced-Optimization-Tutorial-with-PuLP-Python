@@ -1,4 +1,4 @@
-# 🧮 Mathematical Optimization with Python Tutorial
+# 🧮 Business and Operation Optimization with Python Tutorial
 
 ## 🌟 Overview
 
