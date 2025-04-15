@@ -701,6 +701,8 @@ def check_for_contradictions(model):
                     print(f"  {c2.e} == {c2.constant}")
 ```
 
+</details>
+
 ## 🤝 Contributing
 
 Contributions are welcome! Here's how you can help:
@@ -724,3 +726,4 @@ Contributions are welcome! Here's how you can help:
 Click the buttons above to show your support!
 
 </div>
+
