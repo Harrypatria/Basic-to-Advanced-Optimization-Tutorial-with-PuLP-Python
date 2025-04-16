@@ -117,6 +117,178 @@ $
 & h_j(\mathbf{x}) = 0, \quad j = 1, 2, \ldots, p
 \end{align}
 $
+Where:
+
+$f(\mathbf{x})$ is the objective function we want to optimize
+$g_i(\mathbf{x}) \leq 0$ are inequality constraints
+$h_j(\mathbf{x}) = 0$ are equality constraints
+$\mathbf{x}$ is the vector of decision variables
+
+Linear Programming (LP)
+Linear programming involves optimizing a linear objective function subject to linear constraints. The standard form is:
+$
+\begin{align}
+\text{Maximize} \quad & \mathbf{c}^T \mathbf{x} \
+\text{subject to} \quad & \mathbf{A}\mathbf{x} \leq \mathbf{b} \
+& \mathbf{x} \geq \mathbf{0}
+\end{align}
+$
+Where:
+
+$\mathbf{c}$ is the coefficient vector of the objective function
+$\mathbf{A}$ is the constraint coefficient matrix
+$\mathbf{b}$ is the right-hand side constraint vector
+$\mathbf{x}$ is the vector of decision variables
+
+Duality in Linear Programming
+For every linear program (primal problem), there exists a corresponding dual problem:
+Primal (Maximization):
+$
+\begin{align}
+\text{Maximize} \quad & \mathbf{c}^T \mathbf{x} \
+\text{subject to} \quad & \mathbf{A}\mathbf{x} \leq \mathbf{b} \
+& \mathbf{x} \geq \mathbf{0}
+\end{align}
+$
+Dual (Minimization):
+$
+\begin{align}
+\text{Minimize} \quad & \mathbf{b}^T \mathbf{y} \
+\text{subject to} \quad & \mathbf{A}^T\mathbf{y} \geq \mathbf{c} \
+& \mathbf{y} \geq \mathbf{0}
+\end{align}
+$
+The Weak Duality Theorem states that if $\mathbf{x}$ is feasible for the primal and $\mathbf{y}$ is feasible for the dual, then $\mathbf{c}^T \mathbf{x} \leq \mathbf{b}^T \mathbf{y}$.
+The Strong Duality Theorem states that if the primal has an optimal solution $\mathbf{x}^$, then the dual also has an optimal solution $\mathbf{y}^$, and $\mathbf{c}^T \mathbf{x}^* = \mathbf{b}^T \mathbf{y}^*$.
+Complementary Slackness
+For optimal solutions $\mathbf{x}^$ and $\mathbf{y}^$ to the primal and dual problems respectively:
+$
+\begin{align}
+y_i^* \cdot (b_i - \sum_{j=1}^{n} a_{ij}x_j^) &= 0 \quad \forall i = 1, 2, \ldots, m \
+x_j^ \cdot (\sum_{i=1}^{m} a_{ij}y_i^* - c_j) &= 0 \quad \forall j = 1, 2, \ldots, n
+\end{align}
+$
+This property is useful for sensitivity analysis and economic interpretation of solutions.
+Integer Linear Programming (ILP)
+Integer Linear Programming adds the constraint that some or all variables must be integers:
+$
+\begin{align}
+\text{Maximize} \quad & \mathbf{c}^T \mathbf{x} \
+\text{subject to} \quad & \mathbf{A}\mathbf{x} \leq \mathbf{b} \
+& \mathbf{x} \geq \mathbf{0} \
+& x_j \in \mathbb{Z} \quad \text{for some or all } j
+\end{align}
+$
+Binary Integer Programming
+A special case of ILP where variables are restricted to 0 or 1:
+$
+\begin{align}
+\text{Maximize} \quad & \mathbf{c}^T \mathbf{x} \
+\text{subject to} \quad & \mathbf{A}\mathbf{x} \leq \mathbf{b} \
+& x_j \in {0, 1} \quad \forall j
+\end{align}
+$
+Binary variables are especially useful for modeling logical conditions:
+
+$x_1 \lor x_2$ (OR): $x_1 + x_2 \geq 1$
+$x_1 \land x_2$ (AND): $x_1 = 1, x_2 = 1$
+$\lnot x_1$ (NOT): $1 - x_1$
+If-then constraint: If $x_1 = 1$ then $x_2 = 1$ becomes $x_1 \leq x_2$
+
+Mixed-Integer Linear Programming (MILP)
+MILP allows some variables to be continuous and others to be integers:
+$
+\begin{align}
+\text{Maximize} \quad & \mathbf{c}^T \mathbf{x} + \mathbf{d}^T \mathbf{y} \
+\text{subject to} \quad & \mathbf{A}\mathbf{x} + \mathbf{B}\mathbf{y} \leq \mathbf{b} \
+& \mathbf{x} \geq \mathbf{0}, \mathbf{y} \geq \mathbf{0} \
+& x_j \in \mathbb{Z} \quad \forall j
+\end{align}
+$
+Where $\mathbf{x}$ are integer variables and $\mathbf{y}$ are continuous variables.
+Non-Linear Programming (NLP)
+When the objective function or constraints are non-linear:
+$
+\begin{align}
+\text{Minimize} \quad & f(\mathbf{x}) \
+\text{subject to} \quad & g_i(\mathbf{x}) \leq 0, \quad i = 1, 2, \ldots, m \
+& h_j(\mathbf{x}) = 0, \quad j = 1, 2, \ldots, p \
+& \mathbf{x} \in \mathbb{R}^n
+\end{align}
+$
+Convex Optimization
+A special case of NLP where:
+
+$f(\mathbf{x})$ is convex
+Inequality constraint functions $g_i(\mathbf{x})$ are convex
+Equality constraint functions $h_j(\mathbf{x})$ are affine (linear)
+
+Convex problems have the desirable property that any local optimum is also a global optimum.
+Quadratic Programming (QP)
+QP involves minimizing a quadratic objective function with linear constraints:
+$
+\begin{align}
+\text{Minimize} \quad & \frac{1}{2}\mathbf{x}^T\mathbf{Q}\mathbf{x} + \mathbf{c}^T\mathbf{x} \
+\text{subject to} \quad & \mathbf{A}\mathbf{x} \leq \mathbf{b} \
+& \mathbf{E}\mathbf{x} = \mathbf{d} \
+& \mathbf{x} \geq \mathbf{0}
+\end{align}
+$
+Where $\mathbf{Q}$ is a symmetric matrix. If $\mathbf{Q}$ is positive semidefinite, the problem is convex.
+Network Flow Problems
+Network flow problems involve finding the optimal flow through a network:
+$
+\begin{align}
+\text{Minimize} \quad & \sum_{(i,j) \in A} c_{ij}x_{ij} \
+\text{subject to} \quad & \sum_{j:(i,j) \in A} x_{ij} - \sum_{j:(j,i) \in A} x_{ji} = b_i \quad \forall i \in N \
+& 0 \leq x_{ij} \leq u_{ij} \quad \forall (i,j) \in A
+\end{align}
+$
+Where:
+
+$A$ is the set of arcs in the network
+$N$ is the set of nodes
+$c_{ij}$ is the cost per unit flow on arc $(i,j)$
+$b_i$ is the supply/demand at node $i$ (positive for supply, negative for demand)
+$u_{ij}$ is the capacity of arc $(i,j)$
+
+Multi-Objective Optimization
+When there are multiple conflicting objectives:
+$
+\begin{align}
+\text{Minimize} \quad & \mathbf{F}(\mathbf{x}) = [f_1(\mathbf{x}), f_2(\mathbf{x}), \ldots, f_k(\mathbf{x})]^T \
+\text{subject to} \quad & g_i(\mathbf{x}) \leq 0, \quad i = 1, 2, \ldots, m \
+& h_j(\mathbf{x}) = 0, \quad j = 1, 2, \ldots, p
+\end{align}
+$
+This leads to the concept of Pareto optimality, where a solution is Pareto optimal if no objective can be improved without degrading at least one other objective.
+Stochastic Programming
+Optimization under uncertainty, with the general form:
+$
+\begin{align}
+\text{Minimize} \quad & \mathbb{E}_{\omega}[f(\mathbf{x}, \omega)] \
+\text{subject to} \quad & g_i(\mathbf{x}) \leq 0, \quad i = 1, 2, \ldots, m \
+& \mathbb{P}(h_j(\mathbf{x}, \omega) \leq 0) \geq 1-\alpha_j, \quad j = 1, 2, \ldots, p
+\end{align}
+$
+Where:
+
+$\omega$ represents random events
+$\mathbb{E}$ is the expected value
+$\mathbb{P}$ is the probability
+$\alpha_j$ is the risk tolerance for constraint $j$
+
+Solution Techniques
+Simplex Method (for LP)
+The simplex algorithm moves from one extreme point of the feasible region to an adjacent one, improving the objective value at each step until reaching optimality.
+Branch and Bound (for ILP and MILP)
+
+Solve the LP relaxation (ignore integer constraints)
+If solution is integer, we're done
+Otherwise, choose a non-integer variable $x_i$ with fractional value $f$
+Create two subproblems by adding constraints $x_i \leq \lfloor f \rfloor$ and $x_i \geq \lceil f \rceil$
+Recursively solve the subproblems
+Use bounds to prune the search tree
 
 ## 🔥 Optimization Models Showcase
 
